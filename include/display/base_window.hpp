@@ -7,6 +7,10 @@
 #include "imgui_impl_opengl3.h"
 #include <string>
 
+#include "glm.hpp"
+#include "gtc/matrix_transform.hpp"
+#include "gtc/type_ptr.hpp"
+
 class BaseWindow {
     public:
     int windowWidth, windowHeight;

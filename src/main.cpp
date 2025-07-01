@@ -2,6 +2,6 @@
 
 int main() {
     // Create the game window with the specified size and title
-    GameWindow gw = GameWindow{ 800, 600, "opengl-imgui-voxel-engine" };
+    GameWindow gw = GameWindow{ 1280, 720, "OpenGL Voxel Engine" };
     return gw.Run();
 }

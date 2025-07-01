@@ -139,3 +139,15 @@ Shader Shader::LoadShader(std::string fileVertexShader, std::string fileFragment
 
     return s;
 }
+
+void Shader::setBool(unsigned int programID, std::string name, bool value) {
+    glUniform1i(glGetUniformLocation(programID, name.c_str()), (int)value);
+}
+
+void Shader::setInt(unsigned int programID, std::string name, int value) {
+    glUniform1i(glGetUniformLocation(programID, name.c_str()), value);
+}
+
+void Shader::setFloat(unsigned int programID, std::string name, float value) {
+    glUniform1f(glGetUniformLocation(programID, name.c_str()), value);
+}
