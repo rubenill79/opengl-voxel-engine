@@ -1,6 +1,7 @@
 #include "display/game_window.hpp"
 #include "shaders/shader.hpp"
 #include "utils/stb_image.h"
+#include "utils/error_reporting.h"
 #include <iostream>
 
 // Template stuff
@@ -29,6 +30,8 @@ void GameWindow::Initialize() {
 void GameWindow::LoadContent() {
     // Set callback
     glfwSetFramebufferSizeCallback(this->windowHandle, FramebufferSizeCallback);
+    // Enable error reporting
+    enableReportGlErrors();
 
     // Initialize imgui
     IMGUI_CHECKVERSION();
